@@ -1,0 +1,159 @@
+/*
+ * Denoréaz Thomas
+ */
+
+@font-face
+{
+	font-family: GeminaCond;
+	src: url('../fonts/geminacond.ttf');
+}
+
+html, body {
+   height:100%;
+}
+
+body {
+	position: relative;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gemcond {
+	font-family: GeminaCond;
+}
+
+.bg {
+	background-color: #f0f0f0;
+}
+
+.bottom {
+	position: relative;
+	padding: 30px;
+	background-color: #303030;
+	color: #808080;
+}
+
+.page {
+	position: relative;
+	padding: 5px;
+}
+
+a.gray {
+	color: #808080;
+}
+
+a.gray:hover {
+	color: #C0C0C0;
+}
+
+#home {
+	padding-top: 50px;
+	height: 100%;
+	background-image: url('../images/background.jpg');
+	opacity: 0.8;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	background-attachment: fixed;
+    overflow: hidden;
+}
+
+.full-height {
+	min-height: 100%;
+}
+
+.resume th, .resume td {
+    border-top: none !important;
+    text-align: left;
+    padding: 5px;
+}
+
+
+
+.row.vertical-divider {
+  overflow: hidden;
+}
+.row.vertical-divider > div[class^="col-"] {
+  text-align: center;
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+  border-left: 2px solid #f0f0f0;
+  border-right: 2px solid #f0f0f0;
+}
+.row.vertical-divider div[class^="col-"]:first-child {
+  border-left: none;
+}
+.row.vertical-divider div[class^="col-"]:last-child {
+  border-right: none;
+}
+
+#head-title > h1 {
+  color: rgba(128, 128, 128, 0.8);
+}
+
+#head-title > h1 > small {
+  color: rgba(240, 240, 240, 0.8);
+}
+
+#head-title > hr {
+  height: 5px;
+  background-color: rgba(240, 240, 240, 0.8);
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+.navbar-brand {
+	padding: 5px 5px;
+}
+
+#navbar-thmx.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#navbar-thmx.navbar-default {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#navbar-thmx.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(255, 255, 255, 0);
+}
+#navbar-thmx.navbar-default .navbar-nav>li>a:hover,
+#navbar-thmx.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+#navbar-thmx.navbar-default .navbar-nav>.active>a,
+#navbar-thmx.navbar-default .navbar-nav>.active>a:hover,
+#navbar-thmx.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(64, 64, 64, 0.2);
+}
+#navbar-thmx.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#navbar-thmx.navbar-default .navbar-toggle:hover,
+#navbar-thmx.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#navbar-thmx.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#navbar-thmx.navbar-default .navbar-toggle:hover .icon-bar,
+#navbar-thmx.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #dbdbdb;
+}

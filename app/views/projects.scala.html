@@ -1,0 +1,29 @@
+@(projects: List[Project])
+
+<div id="projects" class="full-height container-fluid page bg">
+    <h1 class="gemcond">
+        <span class="fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i
+                class="fa fa-folder-open fa-stack-1x"></i></span>
+        Projects
+    </h1>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            @for(p <- projects) {
+            <div class="col-xs-12 col-sm-4 col-md-3" data-toggle="modal" data-target="#@p.kw">
+                <div class="thumbnail">
+                    <img src="@pimg(p, "thumbnail.png")"/>
+                    <div class="caption">@p.tpe</div>
+                </div>
+            </div>
+            }
+
+        </div>
+    </div>
+
+    @for(p <- projects) {
+    @project(p)
+    }
+
+</div>
