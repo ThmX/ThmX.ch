@@ -2,7 +2,6 @@
 
 # SBT
 /.sbtserver/
-/project/
 *.swp
 /target/
 
