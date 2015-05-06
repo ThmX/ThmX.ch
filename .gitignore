@@ -4,6 +4,8 @@
 /.sbtserver/
 *.swp
 /target/
+/project/project/
+/project/target/
 
 # Eclipse project
 /.cache
