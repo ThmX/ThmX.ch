@@ -1,0 +1,13 @@
+{
+  "shortname": "forumepfl",
+  "filters": ["filter-mobile", "filter-android"],
+  "caption": "Android App",
+  "name": "ForumEPFL",
+  "description": "Design of the Android application to have access to the program, find a company's presentation date, localize a specific stand, read companies profiles and log in to your user account.",
+  "logo": "logo.png",
+  "date": "2011-2012",
+  "url": "http://forum.epfl.ch",
+  "code": "Java (Android)",
+  "pics": ["screenshot1.jpg", "screenshot2.jpg", "screenshot3.jpg"],
+  "mobile": true
+}

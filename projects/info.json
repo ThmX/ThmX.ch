@@ -1,0 +1,13 @@
+{
+  "shortname": "lsi",
+  "filters": ["filter-web"],
+  "caption": "Caption",
+  "name": "Name",
+  "description": "Desc",
+  "logo": "logo.jpg",
+  "date": "2015",
+  "url": "url",
+  "code": "Code",
+  "pics": ["dashboard.jpg"],
+  "mobile": false
+}

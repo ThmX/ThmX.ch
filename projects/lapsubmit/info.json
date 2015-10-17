@@ -1,0 +1,13 @@
+{
+  "shortname": "lapsubmit",
+  "filters": ["filter-web"],
+  "caption": "Jenkins Plugin",
+  "name": "LAP Submit",
+  "description": "Design of the Computer Architecture laboratory automated grading system built on top of Jenkins (jenkins-ci.org) interconnecting several system together.",
+  "logo": "logo.png",
+  "date": "2013-2014",
+  "url": "http://lap.epfl.ch",
+  "code": "Bash, Perl, Groovy, Java, Jenkins Plugins (Java, Groovy)",
+  "pics": ["lapsubmit1.jpg", "lapsubmit2.jpg"],
+  "mobile": false
+}

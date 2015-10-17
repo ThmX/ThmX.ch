@@ -11,8 +11,8 @@
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="stylesheets/reset-min-3.18.1.css"/>
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
-    <link rel="stylesheet" href="stylesheets/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/animate.min.css"/>
     <link rel="stylesheet" href="stylesheets/thmx.css"/>
 
@@ -36,9 +36,11 @@
 </head>
 <body data-spy="scroll" data-target="#navbar-thmx">
 
+<!--
 <div class="loader text-center">
     <i id="loader" class="fa fa-spinner fa-pulse fa-4x"></i>
 </div>
+-->
 
 <nav id="navbar-thmx" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -290,7 +292,7 @@
 
     <p class="text-center">
         <a class="btn btn-default btn-lg" href="cv_denoreaz_thomas.pdf" target="_blank" role="button">
-            <i class="fa fa-download"></i> Download as PDF
+            <i class="fa fa-download"></i> More as PDF
         </a>
     </p>
 </div>
@@ -310,15 +312,13 @@
 		<button type="button" class="btn btn-default" data-filter=".filter-hardware">Hardware</button>
 	</div>
 
-    <div class="container-fluid">
-        <div id="modals-buttons" class="row wow fadeInUp"></div>
-    </div>
+	<div class="container-fluid">
+		<div id="projects-react" class="row"></div>
+	</div>
 
     <p class="text-center">
         <a class="btn btn-default btn-lg" href="http://github.com/ThmX" target="_blank" role="button"><i class="fa fa-github"></i> More on GitHub</a>
     </p>
-    
-    <div id="modals"></div>
 
 </div>
 
@@ -335,21 +335,28 @@
         </div>
 
         <p class="text-center white">
-        	Thomas Denoréaz <i class="fa fa-copyright"></i> 2015 - Last update: 26.09.2015
+        	Thomas Denoréaz <i class="fa fa-copyright"></i> 2015 - Last update: 18.10.2015
         </p>
 
     </div>
 
-    <script src="javascripts/jquery.min.js"></script>
-    <script src="javascripts/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="javascripts/jquery.easing.min.js"></script>
-    <script src="javascripts/scrolling-nav.js"></script>
+	<script src="javascripts/jquery.easing.min.js"></script>
+	<script src="javascripts/scrolling-nav.js"></script>
 
-	<script src="javascripts/isotope.min.js"></script>
-    <script src="javascripts/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+	<script src="javascripts/wow.min.js"></script>
 
-    <script src="javascripts/thmx.js"></script>
+	<script src="https://fb.me/react-0.14.0.js"></script>
+	<script src="https://fb.me/react-dom-0.14.0.js"></script>
+
+
+	<script src="dist/thmx.min.js"></script>
+	<!--
+	<script src="javascripts/bootstrap.min.js"></script>
+	-->
 
 </body>
 </html>
