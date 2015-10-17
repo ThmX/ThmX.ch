@@ -1,0 +1,13 @@
+{
+  "shortname": "lapbachelor",
+  "filters": ["filter-hardware"],
+  "caption": "Design on FPGA",
+  "name": "Bachelor Project - ARM based Dynamic Scheduling",
+  "description": "The main target of my Bachelor project was to design a dynamically scheduled processor based on the ARM architecture. And then compare it to a multicycle version.",
+  "logo": "logo.png",
+  "date": "2012",
+  "url": "http://lap.epfl.ch",
+  "code": "VHDL, ARM asm",
+  "pics": ["presentation.jpg", "arm_cpu.png", "schematics-dynamic.png", "schematics-multicycle.png", "arm_asm.jpg", "tools.jpg"],
+  "mobile": false
+}
