@@ -1,0 +1,203 @@
+/*
+ * Denoréaz Thomas
+ */
+
+@font-face
+{
+	font-family: GeminaCond;
+	src: url('../fonts/geminacond.ttf');
+}
+
+html, body {
+  height:100%;
+  background-color: black;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+body {
+	position: relative;
+}
+
+.loader {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  z-index: 9990;
+}
+
+#loader {
+  position: relative;
+  color: white;
+  top: 45%;
+  z-index: 9999;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gemcond {
+	font-family: GeminaCond;
+}
+
+a {
+  color: #FFF;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+.modal-body a {
+  color: #000;
+}
+
+.modal-body a:hover {
+  color: #000;
+}
+
+.bg-dark {
+	background-color: rgba(230, 230, 230, 0.8);
+  margin-top: 30px;
+}
+
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 30px;
+}
+
+.bottom {
+	position: relative;
+	padding: 30px;
+	color: #C0C0C0;
+}
+
+.page {
+	position: relative;
+	padding: 5px;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.gray {
+	color: #A0A0A0;
+}
+
+.gray a:hover {
+	color: #FFFFFF;
+}
+
+
+#home {
+  padding-top: 50px;
+  height: 100%;
+}
+
+.full-height {
+	min-height: 100%;
+}
+
+.resume th, .resume td {
+    border-top: none !important;
+    text-align: left;
+    padding: 5px;
+}
+
+
+#head-title > h1 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#head-title > h1 > small {
+  color: rgba(196, 196, 196, 0.8);
+}
+
+#head-title > hr {
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+
+.filter-button-group {
+  padding-bottom: 20px;
+}
+
+
+/*
+ * Bootstrap # Carousel
+ */
+
+ .carousel-indicators .active {
+    background-color: #000;
+}
+
+.carousel-indicators li {
+    border: 1px solid #000;
+}
+
+.carousel-indicators.white .active {
+    background-color: #FFF;
+}
+
+.carousel-indicators.white li {
+    border: 1px solid #FFF;
+}
+
+
+/*
+ * Bootstrap # Navbar
+ */
+
+.navbar-brand {
+	padding: 5px 5px;
+}
+
+#navbar-thmx.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#navbar-thmx.navbar-default {
+    font-size: 14px;
+    background-color: rgba(0,0,0, 0.5);
+    background: -webkit-linear-gradient(top, rgba(0,0,0, 0.5) 0%, rgba(0,0,0, 0.25) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0, 0.5) 0%, rgba(0,0,0, 0.25) 100%);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#navbar-thmx.navbar-default .navbar-nav>li>a {
+    color: rgba(196, 196, 196, 1);
+    background-color: rgba(255, 255, 255, 0);
+}
+#navbar-thmx.navbar-default .navbar-nav>li>a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(200, 200, 200, 0.5);
+}
+#navbar-thmx.navbar-default .navbar-nav>.active>a,
+#navbar-thmx.navbar-default .navbar-nav>.active>a:hover,
+#navbar-thmx.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(200, 200, 200, 0.3);
+}
+#navbar-thmx.navbar-default .navbar-toggle {
+    border-color: #ddd;
+    background-color: transparent;
+}
+#navbar-thmx.navbar-default .navbar-toggle:hover,
+#navbar-thmx.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+#navbar-thmx.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#navbar-thmx.navbar-default .navbar-toggle:hover .icon-bar,
+#navbar-thmx.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #dbdbdb;
+}
