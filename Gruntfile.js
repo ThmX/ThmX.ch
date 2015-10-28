@@ -12,14 +12,21 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
+    browserify: {
+      dist: {
+        files: {
+          'dist/<%= pkg.name %>.js': ['build/<%= pkg.name %>.js']
+        }
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
         stripBanners: true
       },
       dist: {
-        src: ['build/**/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['build/babel/*.js', 'build/cjsx/*.js'],
+        dest: 'build/<%= pkg.name %>.js'
       },
     },
     uglify: {
@@ -27,29 +34,18 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
+        src: 'dist/<%= pkg.name %>.js',
         dest: 'dist/<%= pkg.name %>.min.js'
       },
     },
     nodeunit: {
       files: ['test/**/*_test.js']
     },
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: '.jshintrc'
+        configFile: "eslintrc.json"
       },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      src: {
-        options: {
-          jshintrc: 'src/.jshintrc'
-        },
-        src: ['build/babel/**/*.js', 'build/cjsx/**/*.js']
-      },
-      test: {
-        src: ['test/**/*.js']
-      },
+      src: ['src/**/*.jsx', 'src/**/*.coffee']
     },
     watch: {
       gruntfile: {
@@ -99,11 +95,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks("gruntify-eslint");
 
   // Tasks
-  grunt.registerTask('default', ['babel', 'cjsx', 'jshint', 'concat']);
-  grunt.registerTask('prod', ['babel', 'cjsx', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', ['eslint', 'babel', 'cjsx', 'concat', 'browserify']);
+  grunt.registerTask('prod', ['default', 'uglify']);
 
 };

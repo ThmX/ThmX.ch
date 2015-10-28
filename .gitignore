@@ -1,20 +1,10 @@
-/examples/
-
-# SBT
-/.sbtserver/
-*.swp
-/target/
-/project/project/
-/project/target/
-
-# Eclipse project
-/.cache
-/.classpath
-/.project
-/.settings/
+.DS_Store
 
 # IntelliJ IDEA project
 /.idea/
 
-# Play
-/logs/
+# Node
+/node_modules/
+
+# Grunt
+/build/
