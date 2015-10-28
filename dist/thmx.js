@@ -42,7 +42,7 @@ var ProjectButton = _react2['default'].createClass({
         var project = this.props.project;
         return _react2['default'].createElement(
             'div',
-            { className: 'grid-item col-xs-6 col-sm-4 col-md-3 ' + project.filters.join(' ') },
+            { className: 'grid-item col-xs-12 col-sm-4 col-md-3 ' + project.filters.join(' ') },
             _react2['default'].createElement(
                 'button',
                 { type: 'button', className: 'thumbnail btn btn-default',

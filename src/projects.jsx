@@ -27,7 +27,7 @@ var ProjectButton = React.createClass({
     render() {
         var project = this.props.project;
         return (
-            <div className={'grid-item col-xs-6 col-sm-4 col-md-3 ' + project.filters.join(' ')}>
+            <div className={'grid-item col-xs-12 col-sm-4 col-md-3 ' + project.filters.join(' ')}>
                 <button type='button' className='thumbnail btn btn-default'
                         data-toggle='modal' data-target={'#' + project.shortname}>
                     <Image src={'projects/'+ project.shortname +'/thumbnail.png'}/>
