@@ -123,7 +123,7 @@ var Project = React.createClass({
     },
     componentDidMount() {
         $.getJSON(this.props.url, function(data) {
-            setState(data);
+            this.setState(data);
         }.bind(this));
     },
     componentDidUpdate() {
@@ -167,6 +167,6 @@ var Projects = React.createClass({
 });
 
 ReactDOM.render(
-    <Projects url='projects.json' />,
+    <Projects url='projects/projects.json' />,
     document.getElementById('projects-react')
 );

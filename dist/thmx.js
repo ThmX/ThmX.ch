@@ -219,7 +219,7 @@ var Project = _react2['default'].createClass({
     },
     componentDidMount: function componentDidMount() {
         $.getJSON(this.props.url, (function (data) {
-            setState(data);
+            this.setState(data);
         }).bind(this));
     },
     componentDidUpdate: function componentDidUpdate() {
@@ -264,7 +264,7 @@ var Projects = _react2['default'].createClass({
     }
 });
 
-_reactDom2['default'].render(_react2['default'].createElement(Projects, { url: 'projects.json' }), document.getElementById('projects-react'));
+_reactDom2['default'].render(_react2['default'].createElement(Projects, { url: 'projects/projects.json' }), document.getElementById('projects-react'));
 
 new WOW().init();
 

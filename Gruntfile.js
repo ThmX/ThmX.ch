@@ -12,54 +12,11 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
-    browserify: {
-      dist: {
-        files: {
-          'dist/<%= pkg.name %>.js': ['build/<%= pkg.name %>.js']
-        }
-      }
-    },
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['build/babel/*.js', 'build/cjsx/*.js'],
-        dest: 'build/<%= pkg.name %>.js'
-      },
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      },
-    },
-    nodeunit: {
-      files: ['test/**/*_test.js']
-    },
     eslint: {
       options: {
         configFile: "eslintrc.json"
       },
       src: ['src/**/*.jsx', 'src/**/*.coffee']
-    },
-    watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      lib: {
-        files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'nodeunit']
-      },
-      test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'nodeunit']
-      },
     },
     babel: {
       options: {
@@ -85,6 +42,45 @@ module.exports = function(grunt) {
         dest: 'build/cjsx/',
         ext: '.js'
       }
+    },
+    concat: {
+      options: {
+        banner: '<%= banner %>',
+        stripBanners: true
+      },
+      dist: {
+        src: ['build/babel/*.js', 'build/cjsx/*.js'],
+        dest: 'build/<%= pkg.name %>.js'
+      },
+    },
+    browserify: {
+      dist: {
+        files: {
+          'dist/<%= pkg.name %>.js': ['build/<%= pkg.name %>.js']
+        }
+      }
+    },
+    uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
+      dist: {
+        src: 'dist/<%= pkg.name %>.js',
+        dest: 'dist/<%= pkg.name %>.min.js'
+      },
+    },
+    nodeunit: {
+      files: ['test/**/*_test.js']
+    },
+    watch: {
+      gruntfile: {
+        files: '<%= eslint.src %>',
+        tasks: ['jshint:gruntfile']
+      },
+      test: {
+        files: '<%= nodeunit.files %>',
+        tasks: ['jshint:test', 'nodeunit']
+      },
     },
   });
 
