@@ -23,6 +23,7 @@ $('#projects-react').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oani
 var ProjectButton = React.createClass({
     componentDidMount() {
         $grid.isotope('reloadItems');
+        $grid.isotope({ filter: '*' });
     },
     render() {
         var project = this.props.project;
@@ -103,7 +104,7 @@ var ProjectModal = React.createClass({
 
                                     <hr/>
 
-                                    <p>{project.description}</p>
+                                    <p dangerouslySetInnerHTML={{__html: project.description}} />
                                 </div>
 
                             </div>
@@ -118,31 +119,13 @@ var ProjectModal = React.createClass({
 });
 
 var Project = React.createClass({
-    getInitialState() {
-        return null;
-    },
-    componentDidMount() {
-        $.getJSON(this.props.url, function(data) {
-            this.setState(data);
-        }.bind(this));
-    },
-    componentDidUpdate() {
-        window.setTimeout(() => {
-            $grid.isotope('reloadItems');
-            $grid.isotope({ filter: '*' });
-        }, 50);
-    },
     render() {
-        if (this.state) {
-            return (
-                <div key={this.state.shortname} className='row'>
-                    <ProjectButton project={this.state} />
-                    <ProjectModal project={this.state} />
-                </div>
-            );
-        } else {
-            return null;
-        }
+        return (
+            <div className='row'>
+                <ProjectButton project={this.props.project} />
+                <ProjectModal project={this.props.project} />
+            </div>
+        );
     }
 });
 
@@ -155,11 +138,17 @@ var Projects = React.createClass({
             this.setState({projects: data});
         }.bind(this));
     },
+    componentDidUpdate(prevProps, prevState) {
+        $grid.isotope('reloadItems');
+        window.setTimeout(() => {
+            $grid.isotope({ filter: '*' });
+        }, 500);
+    },
     render() {
         return (
             <div>
                 {this.state.projects.map(p => {
-                    return <Project key={p} url={'projects/' + p + '/info.json'}/>;
+                    return <Project key={p.shortname} project={p}/>;
                 })}
             </div>
         );

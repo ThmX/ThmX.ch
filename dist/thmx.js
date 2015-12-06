@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/*! thmx - v0.1.0 - 2015-10-28
+/*! thmx - v0.1.0 - 2015-12-06
 * https://github.com/ThmX/ThmX.ch
 * Copyright (c) 2015 Thomas Denoréaz; Licensed MIT */
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -37,6 +37,7 @@ var ProjectButton = _react2['default'].createClass({
 
     componentDidMount: function componentDidMount() {
         $grid.isotope('reloadItems');
+        $grid.isotope({ filter: '*' });
     },
     render: function render() {
         var project = this.props.project;
@@ -197,11 +198,7 @@ var ProjectModal = _react2['default'].createClass({
                                     project.code
                                 ),
                                 _react2['default'].createElement('hr', null),
-                                _react2['default'].createElement(
-                                    'p',
-                                    null,
-                                    project.description
-                                )
+                                _react2['default'].createElement('p', { dangerouslySetInnerHTML: { __html: project.description } })
                             )
                         )
                     )
@@ -214,31 +211,13 @@ var ProjectModal = _react2['default'].createClass({
 var Project = _react2['default'].createClass({
     displayName: 'Project',
 
-    getInitialState: function getInitialState() {
-        return null;
-    },
-    componentDidMount: function componentDidMount() {
-        $.getJSON(this.props.url, (function (data) {
-            this.setState(data);
-        }).bind(this));
-    },
-    componentDidUpdate: function componentDidUpdate() {
-        window.setTimeout(function () {
-            $grid.isotope('reloadItems');
-            $grid.isotope({ filter: '*' });
-        }, 50);
-    },
     render: function render() {
-        if (this.state) {
-            return _react2['default'].createElement(
-                'div',
-                { key: this.state.shortname, className: 'row' },
-                _react2['default'].createElement(ProjectButton, { project: this.state }),
-                _react2['default'].createElement(ProjectModal, { project: this.state })
-            );
-        } else {
-            return null;
-        }
+        return _react2['default'].createElement(
+            'div',
+            { className: 'row' },
+            _react2['default'].createElement(ProjectButton, { project: this.props.project }),
+            _react2['default'].createElement(ProjectModal, { project: this.props.project })
+        );
     }
 });
 
@@ -253,12 +232,18 @@ var Projects = _react2['default'].createClass({
             this.setState({ projects: data });
         }).bind(this));
     },
+    componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
+        $grid.isotope('reloadItems');
+        window.setTimeout(function () {
+            $grid.isotope({ filter: '*' });
+        }, 500);
+    },
     render: function render() {
         return _react2['default'].createElement(
             'div',
             null,
             this.state.projects.map(function (p) {
-                return _react2['default'].createElement(Project, { key: p, url: 'projects/' + p + '/info.json' });
+                return _react2['default'].createElement(Project, { key: p.shortname, project: p });
             })
         );
     }
