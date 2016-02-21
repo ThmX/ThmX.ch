@@ -1,5 +1,16 @@
 [
 	{
+		"shortname": "fpresso",
+		"filters": ["filter-web"],
+		"caption": "WebApp with Scala Play / AngularJS",
+		"name": "FPRESSO",
+		"description": "FPRESSO is an FPGA modeling tool designed at the Processor Architecture Lab, EPFL. By uploading a description of the FPGA architecture FPRESSO can be used to generate an FPGA architecture file annotated with area and delay values of each component.",
+		"logo": "logo.png",
+		"date": "2016",
+		"url": "http://fpresso.epfl.ch",
+		"code": "Scala PlayFramework, AngularJS",
+		"pics": ["dashboard.jpg", "submit.jpg", "admin.jpg"]
+	},{
 		"shortname": "francematille",
 		"filters": ["filter-web"],
 		"caption": "React",
@@ -19,7 +30,7 @@
 		"logo": "logo.png",
 		"date": "2015",
 		"url": "http://spektro.epfl.ch",
-		"code": "Scala PlayFramework",
+		"code": "Scala PlayFramework, jQuery",
 		"pics": ["Energy.jpg", "Vision.jpg", "BioImpact.jpg", "SPD.jpg", "SWF.jpg", "Import.jpg", "About.jpg"]
 	},{
 		"shortname": "lsi",
