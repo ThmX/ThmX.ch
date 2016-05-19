@@ -1,7 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/*! thmx - v0.1.0 - 2015-12-06
+/*! thmx - v0.1.0 - 2016-05-20
 * https://github.com/ThmX/ThmX.ch
-* Copyright (c) 2015 Thomas Denoréaz; Licensed MIT */
+* Copyright (c) 2016 Thomas Denoréaz; Licensed MIT */
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _react = require('react');
@@ -236,7 +236,7 @@ var Projects = _react2['default'].createClass({
         $grid.isotope('reloadItems');
         window.setTimeout(function () {
             $grid.isotope({ filter: '*' });
-        }, 500);
+        }, 1000);
     },
     render: function render() {
         return _react2['default'].createElement(

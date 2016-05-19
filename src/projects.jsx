@@ -142,7 +142,7 @@ var Projects = React.createClass({
         $grid.isotope('reloadItems');
         window.setTimeout(() => {
             $grid.isotope({ filter: '*' });
-        }, 500);
+        }, 1000);
     },
     render() {
         return (

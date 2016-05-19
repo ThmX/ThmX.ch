@@ -1,36 +1,47 @@
 [
 	{
+		"shortname": "mindband",
+		"filters": ["filter-web"],
+		"caption": "AngularJS on Symfony",
+		"name": "mindband",
+		"description": "eTraining App for company in order to keep the employee informed in a entertaining manner and being able to track it.",
+		"logo": "logo.png",
+		"date": "2016",
+		"url": "http://www.mindband.ch",
+		"code": "AngularJS, PHP (Symfony)",
+		"pics": ["Auth.jpg", "Dashboard.jpg", "eModule.jpg", "AdminDashboard.jpg", "AdminEModule.jpg", "AdminContent.jpg"]
+	},{
 		"shortname": "fpresso",
 		"filters": ["filter-web"],
-		"caption": "WebApp with Scala Play / AngularJS",
+		"caption": "AngularJS on Scala Play",
 		"name": "FPRESSO",
 		"description": "FPRESSO is an FPGA modeling tool designed at the Processor Architecture Lab, EPFL. By uploading a description of the FPGA architecture FPRESSO can be used to generate an FPGA architecture file annotated with area and delay values of each component.",
 		"logo": "logo.png",
 		"date": "2016",
 		"url": "http://fpresso.epfl.ch",
-		"code": "Scala PlayFramework, AngularJS",
+		"code": "AngularJS, Scala (PlayFramework)",
 		"pics": ["dashboard.jpg", "submit.jpg", "admin.jpg"]
 	},{
 		"shortname": "francematille",
 		"filters": ["filter-web"],
-		"caption": "React",
+		"caption": "React on Laravel",
 		"name": "France Mattille",
 		"description": "Implementation of a design realized by <a href='http://www.zati.ch/'>Zati</a>.",
 		"logo": "logo.png",
 		"date": "2015",
 		"url": "http://francemattille.ch/",
-		"code": "React",
+		"code": "React, PHP (Laravel)",
 		"pics": ["FranceMatille.jpg", "FranceMatille2.jpg"]
 	},{
 		"shortname": "spektro",
 		"filters": ["filter-web"],
-		"caption": "WebApp with Scala Play",
+		"caption": "jQuery on Scala Play",
 		"name": "SpeKtro",
 		"description": "SpeKtro is an interactive dashboard for exploring non-visual spectrum lighting for human health. The main goal is to help the user to develop a conceptual understanding of the various ways of evaluating spectral effectiveness of ocular light exposure using the RSE factor and gain sufficient knowledge to support its usage.",
 		"logo": "logo.png",
 		"date": "2015",
 		"url": "http://spektro.epfl.ch",
-		"code": "Scala PlayFramework, jQuery",
+		"code": "jQuery, Scala (PlayFramework)",
 		"pics": ["Energy.jpg", "Vision.jpg", "BioImpact.jpg", "SPD.jpg", "SWF.jpg", "Import.jpg", "About.jpg"]
 	},{
 		"shortname": "lsi",
@@ -46,15 +57,14 @@
 	},{
 		"shortname": "scm",
 		"filters": ["filter-web"],
-		"caption": "Java application",
+		"caption": "Java",
 		"name": "Secure-Communication-Module",
 		"description": "This secure communication module started being a communication channel between real state agencies and the State of Geneva.",
 		"logo": "logo.png",
 		"date": "2011-2012",
 		"url": "http://www.usefulweb.ch",
 		"code": "Java (Spring Framework)",
-		"pics": ["scm1.jpg"],
-		"mobile": false
+		"pics": ["scm1.jpg"]
 	},{
 		"shortname": "lapbachelor",
 		"filters": ["filter-hardware"],
@@ -65,8 +75,7 @@
 		"date": "2012",
 		"url": "http://lap.epfl.ch",
 		"code": "VHDL, ARM asm",
-		"pics": ["presentation.jpg", "arm_cpu.png", "schematics-dynamic.png", "schematics-multicycle.png", "arm_asm.jpg", "tools.jpg"],
-		"mobile": false
+		"pics": ["presentation.jpg", "arm_cpu.png", "schematics-dynamic.png", "schematics-multicycle.png", "arm_asm.jpg", "tools.jpg"]
 	},{
 		"shortname": "lapsubmit",
 		"filters": ["filter-web"],
@@ -77,12 +86,11 @@
 		"date": "2013-2014",
 		"url": "http://lap.epfl.ch",
 		"code": "Bash, Perl, Groovy, Java, Jenkins Plugins (Java, Groovy)",
-		"pics": ["lapsubmit1.jpg", "lapsubmit2.jpg"],
-		"mobile": false
+		"pics": ["lapsubmit1.jpg", "lapsubmit2.jpg"]
 	},{
 		"shortname": "forumepfl",
 		"filters": ["filter-mobile", "filter-android"],
-		"caption": "Android App",
+		"caption": "Android",
 		"name": "ForumEPFL",
 		"description": "Design of the Android application to have access to the program, find a company's presentation date, localize a specific stand, read companies profiles and log in to your user account.",
 		"logo": "logo.png",
@@ -94,7 +102,7 @@
 	},{
 		"shortname": "qloudlab",
 		"filters": ["filter-mobile", "filter-android"],
-		"caption": "Android App",
+		"caption": "Android",
 		"name": "Qloudlab",
 		"description": "Creation of the prototype of an Android App to fetch and perform multiple professional medical diagnostics and connect the test results through mobile application.",
 		"logo": "logo.png",
@@ -106,7 +114,7 @@
 	},{
 		"shortname": "aac",
 		"filters": ["filter-mobile", "filter-ios"],
-		"caption": "iOS App",
+		"caption": "iOS",
 		"name": "All About Cars",
 		"description": "iPhone application that allows the user to go through a database of cars and check their features.",
 		"logo": "logo.png",
@@ -118,15 +126,14 @@
 	},{
 		"shortname": "lapprojects",
 		"filters": ["filter-web"],
-		"caption": "WebApp with Spring",
+		"caption": "jQuery on Spring",
 		"name": "LAP Projects",
 		"description": "Design of the WebApp to manage the semester projects of the LAP lab.",
 		"logo": "logo.png",
 		"date": "2013-2014",
 		"url": "http://lap.epfl.ch",
 		"code": "Java (Spring Framework)",
-		"pics": ["lapprojects1.jpg", "lapprojects2.jpg"],
-		"mobile": false
+		"pics": ["lapprojects1.jpg", "lapprojects2.jpg"]
 	},{
 		"shortname": "arpibot",
 		"filters": ["filter-android", "filter-mobile", "filter-software", "filter-hardware"],
@@ -137,19 +144,17 @@
 		"date": "2014-...",
 		"url": "https://github.com/ThmX/ARPi-Bot",
 		"code": "Scala, Scala (Android), C51",
-		"pics": ["ARPiBot.jpg"],
-		"mobile": false
+		"pics": ["ARPiBot.jpg"]
 	},{
 		"shortname": "eblast",
 		"filters": ["filter-software"],
-		"caption": "Java application",
+		"caption": "Java",
 		"name": "eBlast - BitTorrent client",
 		"description": "eBlast is BitTorrent client co-developped with <a href='http://daviddieulivol.com/'>David Dieulivol</a>. The aim was to gain further experience with the OOP paradigm and various design patterns.",
 		"logo": "epfl.png",
 		"date": "2011",
 		"url": "https://github.com/ThmX/epfl-ba2-ITP-eBlast",
 		"code": "Java, Torrent",
-		"pics": ["eblast.png"],
-		"mobile": false
+		"pics": ["eblast.png"]
 	}
 ]
