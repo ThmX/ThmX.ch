@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/*! thmx - v0.1.0 - 2016-05-20
+/*! thmx - v0.1.0 - 2016-05-25
 * https://github.com/ThmX/ThmX.ch
 * Copyright (c) 2016 Thomas Denoréaz; Licensed MIT */
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -16,29 +16,27 @@ var _reactBootstrap = require('react-bootstrap');
 
 var _reactRouterBootstrap = require('react-router-bootstrap');
 
-var $grid = $('#projects-react').isotope({
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry'
-});
+$(function () {
+    window.$grid = $('#projects-react').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'masonry'
+    });
 
-$('.filter-button-group').on('click', 'button', function () {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-    $('.filter-button-group button').removeClass('active');
-    $(this).addClass('active');
-});
+    $('#projects-react').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        window.$grid.isotope({ filter: '*' });
+    });
 
-$('#projects-react').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-    $('#bt-filter-all').click();
+    $('.filter-button-group').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        window.$grid.isotope({ filter: filterValue });
+        $('.filter-button-group button').removeClass('active');
+        $(this).addClass('active');
+    });
 });
 
 var ProjectButton = _react2['default'].createClass({
     displayName: 'ProjectButton',
 
-    componentDidMount: function componentDidMount() {
-        $grid.isotope('reloadItems');
-        $grid.isotope({ filter: '*' });
-    },
     render: function render() {
         var project = this.props.project;
         return _react2['default'].createElement(
@@ -233,10 +231,10 @@ var Projects = _react2['default'].createClass({
         }).bind(this));
     },
     componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-        $grid.isotope('reloadItems');
+        window.$grid.isotope('reloadItems');
         window.setTimeout(function () {
-            $grid.isotope({ filter: '*' });
-        }, 1000);
+            window.$grid.isotope({ filter: '*' });
+        }, 500);
     },
     render: function render() {
         return _react2['default'].createElement(

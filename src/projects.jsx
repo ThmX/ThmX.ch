@@ -4,27 +4,25 @@ import ReactDOM from 'react-dom';
 import { Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-var $grid = $('#projects-react').isotope({
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry'
-});
+$(function () {
+    window.$grid = $('#projects-react').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'masonry'
+    });
 
-$('.filter-button-group').on('click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-    $('.filter-button-group button').removeClass('active');
-    $(this).addClass('active');
-});
+    $('#projects-react').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        window.$grid.isotope({ filter: '*' });
+    });
 
-$('#projects-react').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    $('#bt-filter-all').click();
+    $('.filter-button-group').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        window.$grid.isotope({ filter: filterValue });
+        $('.filter-button-group button').removeClass('active');
+        $(this).addClass('active');
+    });
 });
 
 var ProjectButton = React.createClass({
-    componentDidMount() {
-        $grid.isotope('reloadItems');
-        $grid.isotope({ filter: '*' });
-    },
     render() {
         var project = this.props.project;
         return (
@@ -139,10 +137,10 @@ var Projects = React.createClass({
         }.bind(this));
     },
     componentDidUpdate(prevProps, prevState) {
-        $grid.isotope('reloadItems');
+        window.$grid.isotope('reloadItems');
         window.setTimeout(() => {
-            $grid.isotope({ filter: '*' });
-        }, 1000);
+            window.$grid.isotope({ filter: '*' });
+        }, 500);
     },
     render() {
         return (
