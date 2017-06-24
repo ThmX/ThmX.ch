@@ -1,15 +1,15 @@
 [
 	{
-		"shortname": "mindband",
+		"shortname": "wegrow",
 		"filters": ["filter-web"],
-		"caption": "AngularJS on Symfony",
-		"name": "mindband",
-		"description": "eTraining App for company in order to keep the employee informed in a entertaining manner and being able to track it.",
+		"caption": "Angular on Symfony",
+		"name": "wegrow",
+		"description": "WeGrow is the new learning platform, where the advantages of classic Learn Management Systems (LMS) and social media come together.",
 		"logo": "logo.png",
-		"date": "2016",
-		"url": "http://www.mindband.ch",
-		"code": "AngularJS, PHP (Symfony)",
-		"pics": ["Auth.jpg", "Dashboard.jpg", "eModule.jpg", "AdminDashboard.jpg", "AdminEModule.jpg", "AdminContent.jpg"]
+		"date": "2016-2017",
+		"url": "https://getwegrow.com",
+		"code": "Angular (TS), PHP (Symfony)",
+		"pics": ["Auth.jpg", "Dashboard.jpg", "Module.jpg", "Editor.jpg", "AdminDashboard.jpg"]
 	},{
 		"shortname": "fpresso",
 		"filters": ["filter-web"],
